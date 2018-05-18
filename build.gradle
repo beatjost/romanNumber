@@ -9,17 +9,12 @@ buildscript {
 	}
 }
 
-apply plugin: 'war'
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-
-war {
-	archiveName = 'ROOT.war'
-}
 
 springBoot {
 	mainClass = 'ch.gemdat.romanNumber.RomanNumberApplication'
@@ -35,7 +30,6 @@ repositories {
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 }
 
 eclipse {
