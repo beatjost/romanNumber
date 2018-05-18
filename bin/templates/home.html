@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Roman Number Converter</title>
+	<link rel="apple-touch-icon" th:href="@{favicon.ico}" href="favicon.ico" />
+	<link rel="icon" type="image/x-icon" th:href="@{favicon.ico}" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{favicon.ico}" href="favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	
+	<script src="https://code.jquery.com/jquery-latest.js" charset="UTF-8"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="UTF-8"></script>	
+</head>
+
+<body style="background:#F8F8FF;">
+	<div class="container">
+		<h1 style="position: relative;">Roman Numbers</h1><br/>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+
+	  <form class="form-inline" action="#" th:action="@{/}" method="POST">
+	       <fieldset>
+	           <legend>Convert number to roman</legend>	           
+               <div class="form-group">
+		           	<input class="form-control" type="number" placeholder="Number" name="number" min="1" max="50000" autofocus="autofocus" style="min-width: 160px;" title="Numbers from 1 to 50'000 supported" />
+	           </div>
+	           <button class="btn btn-primary" type="submit" title="Convert to roman">Convert</button>
+	       </fieldset>
+	   </form>
+	   
+	   <br/>
+	   <p class="lead">
+	   	 <span th:text="${nbr}+' in roman: '" th:unless="${roman} == null"></span>
+	   	 <b><span th:text="${roman}" th:unless="${roman} == null"></span></b>	   
+	   </p>
+
+	</div></div>
+		
+	</div>
+</body>
+</html>
