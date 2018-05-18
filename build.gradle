@@ -21,6 +21,11 @@ war {
 	archiveName = 'ROOT.war'
 }
 
+springBoot {
+	mainClass = 'ch.gemdat.romanNumber.RomanNumberApplication'
+    buildInfo()
+}
+
 repositories {
 	mavenCentral()
 	maven { url "https://repo.spring.io/snapshot" }
