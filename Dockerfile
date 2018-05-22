@@ -1,6 +1,6 @@
 FROM java:openjdk-8-jre-alpine
 VOLUME /tmp
-ADD romanNumber.jar app.jar
+ADD build/libs/romanNumber.jar app.jar
 EXPOSE 8080
 
 RUN /usr/sbin/groupadd -g 666 ruth && \
